@@ -6,13 +6,60 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
+				
+				function getEmails(x, y){
+					for (var i = 0; i < x; i++){
+
+						var emailBox = document.getElementById('emails');
+
+						var subject = document.createElement('div');
+						subject.className = 'subject';
+						subject.textContent = 'Subject: ' + y[i].subject;
+						emailBox.appendChild(subject);
+						subject.style.display = 'block';
+
+						var date = document.createElement('div');
+						date.className = 'date';
+						date.textContent = 'Date: ' + y[i].date;
+						subject.appendChild(date);
+						date.style.display = 'block';
+
+						var sender = document.createElement('div');
+						sender.className = 'sender';
+						sender.textContent = 'Sender: ' + y[i].sender;
+						date.appendChild(sender);
+						sender.style.display = 'block';
+
+						var body = document.createElement('div');
+						body.className = 'body';
+						body.textContent = 'Body: ' + y[i].body;
+						sender.appendChild(body);
+						body.style.display = 'block';
+
+					}
+				}
+				getEmails(geemails.length, geemails);
+
+				
+				setInterval(function(){ 
+					
+
+				
+				}, 3000);	
       };
     </script>
 	</head>
 	<body>
-		<div class="container" id="main">
-			Build Me!
+		<h1 class="title">Gee-Mail</h1>
+		<div class="menuItems"> 
+			<div id="menuOptions">Inbox</div>
+			<div id="menuOptions">Sent</div>
+			<div id="menuOptions">Important</div>
+			<div id="menuOptions">Drafts</div>
+			<div id="menuOptions">Trash</div>
+		</div>
+		<div id="emails">
+			<!-- emailBox goes here -->
 		</div>
 	</body>
 </html>

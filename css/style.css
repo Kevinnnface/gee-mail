@@ -1,0 +1,25 @@
+.menuItems {
+    /* display: flex; */
+    color: red;
+}
+:hover.menuItems{
+    color: white;
+    background: red;
+}
+
+#menuOptions {
+    padding: 10px;
+}
+
+/* .date{
+    float: right;    
+} */
+
+#emails{
+    padding: 20px 50px 20px 50px;
+    margin: 20px 10px 20px 10px;
+}
+
+.body{
+    padding: 0px 10px 50px 10px;
+}
