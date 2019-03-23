@@ -40,9 +40,12 @@
 				}
 				getEmails(geemails.length, geemails);
 
-				
+				var num = 10;
+				var findInbox = document.getElementById('menuOptions');
+				findInbox.appendChild(num);
+
 				setInterval(function(){ 
-					
+					inboxCounter.textContent = num++;
 
 				
 				}, 3000);	
@@ -52,7 +55,7 @@
 	<body>
 		<h1 class="title">Gee-Mail</h1>
 		<div class="menuItems"> 
-			<div id="menuOptions">Inbox</div>
+			<div id="menuOptions">Inbox</div> <span id="inboxCounter"></span>
 			<div id="menuOptions">Sent</div>
 			<div id="menuOptions">Important</div>
 			<div id="menuOptions">Drafts</div>
