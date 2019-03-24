@@ -47,17 +47,18 @@
 
 				for (var i = 0; i < geemails.length; i++){
 
-				subjectBoxes[i].addEventListener('click', displayMessages);
+					subjectBoxes[i].addEventListener('click', displayMessages);
+					subjectBoxes[i].style.display === 'block';
 
-				function displayMessages(){
-					if(subjectBoxes.style.display === 'block'){
-							dateBox.style.display = 'none'
-							senderBox.style.display = 'none'
-							bodyBox.style.display = 'none'
-						}else{
-							dateBox.style.display = 'block'
-							senderBox.style.display = 'block'
-							bodyBox.style.display = 'block'
+					function displayMessages(){
+						if(subjectBoxes[i].style.display === 'block'){
+								dateBox[i].style.display = 'none';
+								senderBox[i].style.display = 'none';
+								bodyBox[i].style.display = 'none';
+							}else{
+								dateBox[i].style.display = 'block';
+								senderBox[i].style.display = 'block';
+								bodyBox[i].style.display = 'block';
 						}
 					}	
 				}
