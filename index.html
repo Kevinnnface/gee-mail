@@ -40,13 +40,30 @@
 				}
 				getEmails(geemails.length, geemails);
 
-				var num = 10;
-				var findInbox = document.getElementById('menuOptions');
-				findInbox.appendChild(num);
+				var subjectBox = document.getElementsByClassName('subject');
+				var dateBox = document.getElementsByClassName('date');
+				var senderBox = document.getElementsByClassName('sender');
+				var bodyBox = document.getElementsByClassName('body');
+
+				for (var i = 0; i < geemails.length; i++){
+
+				subjectBox.addEventListener('click', displayMessages);
+
+				function displayMessages(){
+					if(dateBox.style.display === 'block'){
+						dateBox.style.display = 'none'
+						senderBox.style.display = 'none'
+						bodyBox.style.display = 'none'
+						}else{
+						dateBox.style.display = 'block'
+						senderBox.style.display = 'block'
+						bodyBox.style.display = 'block'
+						}
+					}	
+				}
 
 				setInterval(function(){ 
-					inboxCounter.textContent = num++;
-
+					
 				
 				}, 3000);	
       };
