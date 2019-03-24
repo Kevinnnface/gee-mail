@@ -40,30 +40,29 @@
 				}
 				getEmails(geemails.length, geemails);
 
-				var subjectBox = document.getElementsByClassName('subject');
+				var subjectBoxes = document.getElementsByClassName('subject');
 				var dateBox = document.getElementsByClassName('date');
 				var senderBox = document.getElementsByClassName('sender');
 				var bodyBox = document.getElementsByClassName('body');
 
 				for (var i = 0; i < geemails.length; i++){
 
-				subjectBox.addEventListener('click', displayMessages);
+				subjectBoxes[i].addEventListener('click', displayMessages);
 
 				function displayMessages(){
-					if(dateBox.style.display === 'block'){
-						dateBox.style.display = 'none'
-						senderBox.style.display = 'none'
-						bodyBox.style.display = 'none'
+					if(subjectBoxes.style.display === 'block'){
+							dateBox.style.display = 'none'
+							senderBox.style.display = 'none'
+							bodyBox.style.display = 'none'
 						}else{
-						dateBox.style.display = 'block'
-						senderBox.style.display = 'block'
-						bodyBox.style.display = 'block'
+							dateBox.style.display = 'block'
+							senderBox.style.display = 'block'
+							bodyBox.style.display = 'block'
 						}
 					}	
 				}
 
-				setInterval(function(){ 
-					
+				setInterval(function(){
 				
 				}, 3000);	
       };
