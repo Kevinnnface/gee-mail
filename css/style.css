@@ -1,10 +1,14 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
 .menuItems {
-    /* display: flex; */
+    float: left;
     color: red;
 }
-:hover.menuItems{
+:hover.menuOptions{
     color: white;
     background: red;
+    margin: 0px 350px 0px 0px;
 }
 
 #menuOptions {
@@ -17,7 +21,6 @@
 }
 
 .email {
-    border: 4px solid black;
 }
 
 .subject {
@@ -26,19 +29,19 @@
 }
 
 .date {
-    border: 2px solid yellow;
+    float: right;
     display: block;
     padding: 0px 10px 20px 10px;
 
 }
 
 .sender {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: block;
 }
 
 .body {
     padding: 0px 10px 50px 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: block;
 }

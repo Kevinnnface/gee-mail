@@ -2,6 +2,9 @@
 	<head>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Roboto');
+			</style>
     <script>
       window.onload = function() {
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
@@ -34,19 +37,19 @@
 						date.className = 'date';
 						date.textContent = 'Date: ' + y[i].date;
 						subject.appendChild(date);
-						date.style.display = 'block';
+						date.style.display = 'none';
 
 						var sender = document.createElement('div');
 						sender.className = 'sender';
 						sender.textContent = 'Sender: ' + y[i].sender;
 						subject.appendChild(sender);
-						sender.style.display = 'block';
+						sender.style.display = 'none';
 
 						var body = document.createElement('div');
 						body.className = 'body';
 						body.textContent = y[i].body;
 						subject.appendChild(body);
-						body.style.display = 'block';
+						body.style.display = 'none';
 
 					}
 				}
@@ -111,21 +114,21 @@
 					newDate.className = 'date';
 					newDate.textContent = "Date: " + getNewMessage().date;
 					newSubject.appendChild(newDate);
-					newDate.style.display = 'block'
+					newDate.style.display = 'none'
 
 					var newSender = document.createElement('div');
 					newSender.className = 'sender';
 					newSender.textContent = "Sender: " + getNewMessage().sender;
 					newSubject.appendChild(newSender);
-					newSender.style.display = 'block'
+					newSender.style.display = 'none'
 					
 					var newBody = document.createElement('div');
 					newBody.className = 'date';
 					newBody.textContent = getNewMessage().body;
 					newSubject.appendChild(newBody);
-					newBody.style.display = 'block'
+					newBody.style.display = 'none'
 
-				}, 3000);	
+				}, 20000);	
 				
 
 
@@ -136,7 +139,7 @@
 	<body>
 		<h1 class="title">Gee-Mail</h1>
 		<div class="menuItems"> 
-			<div class="menuOptions">Inbox</div> <span id="inboxCounter"></span>
+			<div class="menuOptions">Inbox <span id="inboxCounter"></span></div>
 			<div class="menuOptions">Sent</div>
 			<div class="menuOptions">Important</div>
 			<div class="menuOptions">Drafts</div>
