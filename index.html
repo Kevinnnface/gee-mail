@@ -6,15 +6,19 @@
       window.onload = function() {
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-				
+				var emailBox = document.getElementById('emails');
+				var email = document.createElement('div');
+				email.className = 'email';
+				emailBox.appendChild(email);
+
 				function getEmails(x, y) {
 					for (var i = 0; i < x; i++) {
-
-						var emailBox = document.getElementById('emails');
 
 						var email = document.createElement('div');
 						email.className = 'email';
 						emailBox.appendChild(email);
+
+						
 
 						var subject = document.createElement('div');
 						subject.className = 'subject';
@@ -69,30 +73,70 @@
 						//this.children[0].style is the date div
 						// console.log(this.style.display)
 						if (this.children[0].style.display === 'block') {
+								console.log('it was block style')
 								this.children[0].style.display = 'none';
 								this.children[1].style.display = 'none';
 								this.children[2].style.display = 'none';
 							} else {
+								console.log('it wasnt block style')
 								this.children[0].style.display = 'block';
 								this.children[1].style.display = 'block';
 								this.children[2].style.display = 'block';
 						}
 				}
 
+					var num = 10;
+					var inboxCounter = document.getElementById('inboxCounter');
+					inboxCounter.textContent = "(" + num + ")";
+
 				setInterval(function() {
+
+					console.log('before', num)
+					
+					inboxCounter.textContent = "(" + ++num + ")";
+					console.log('after', num)
+
+					var newSubject = document.createElement('div');
+					newSubject.addEventListener('click', displayMessages);
+					newSubject.className = 'subject';
+					newSubject.textContent = getNewMessage().subject;
+					email.prepend(newSubject);
+					newSubject.style.display = 'block'
 				
+					var newDate = document.createElement('div');
+					newDate.className = 'date';
+					newDate.textContent = getNewMessage().date;
+					newSubject.appendChild(newDate);
+					newDate.style.display = 'block'
+
+					var newSender = document.createElement('div');
+					newSender.className = 'sender';
+					newSender.textContent = getNewMessage().sender;
+					newSubject.appendChild(newSender);
+					newSender.style.display = 'block'
+					
+					var newBody = document.createElement('div');
+					newBody.className = 'date';
+					newBody.textContent = getNewMessage().body;
+					newSubject.appendChild(newBody);
+					newBody.style.display = 'block'
+
 				}, 3000);	
+				
+
+
+				// console.log(getNewMessage().subject)
       };
     </script>
 	</head>
 	<body>
 		<h1 class="title">Gee-Mail</h1>
 		<div class="menuItems"> 
-			<div id="menuOptions">Inbox</div> <span id="inboxCounter"></span>
-			<div id="menuOptions">Sent</div>
-			<div id="menuOptions">Important</div>
-			<div id="menuOptions">Drafts</div>
-			<div id="menuOptions">Trash</div>
+			<div class="menuOptions">Inbox</div> <span id="inboxCounter"></span>
+			<div class="menuOptions">Sent</div>
+			<div class="menuOptions">Important</div>
+			<div class="menuOptions">Drafts</div>
+			<div class="menuOptions">Trash</div>
 		</div>
 		<div id="emails">
 			<!-- emailBox goes here -->
