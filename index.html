@@ -3,19 +3,23 @@
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
-      window.onload = function(){
+      window.onload = function() {
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 				
-				function getEmails(x, y){
-					for (var i = 0; i < x; i++){
+				function getEmails(x, y) {
+					for (var i = 0; i < x; i++) {
 
 						var emailBox = document.getElementById('emails');
+
+						var email = document.createElement('div');
+						email.className = 'email';
+						emailBox.appendChild(email);
 
 						var subject = document.createElement('div');
 						subject.className = 'subject';
 						subject.textContent = 'Subject: ' + y[i].subject;
-						emailBox.appendChild(subject);
+						email.appendChild(subject);
 						subject.style.display = 'block';
 
 						var date = document.createElement('div');
@@ -27,43 +31,55 @@
 						var sender = document.createElement('div');
 						sender.className = 'sender';
 						sender.textContent = 'Sender: ' + y[i].sender;
-						date.appendChild(sender);
+						subject.appendChild(sender);
 						sender.style.display = 'block';
 
 						var body = document.createElement('div');
 						body.className = 'body';
 						body.textContent = 'Body: ' + y[i].body;
-						sender.appendChild(body);
+						subject.appendChild(body);
 						body.style.display = 'block';
 
 					}
 				}
 				getEmails(geemails.length, geemails);
 
+				var emailContainers = document.getElementsByClassName('email');
 				var subjectBoxes = document.getElementsByClassName('subject');
-				var dateBox = document.getElementsByClassName('date');
-				var senderBox = document.getElementsByClassName('sender');
-				var bodyBox = document.getElementsByClassName('body');
+				var dateBoxes = document.getElementsByClassName('date');
+				var senderBoxes = document.getElementsByClassName('sender');
+				var bodyBoxes = document.getElementsByClassName('body');
 
-				for (var i = 0; i < geemails.length; i++){
+				// console.log(emailContainers)
+				// console.log(subjectBoxes)
+				// console.log(dateBoxes)
 
+
+
+				for (var i = 0; i < geemails.length; i++) {
 					subjectBoxes[i].addEventListener('click', displayMessages);
-					subjectBoxes[i].style.display === 'block';
-
-					function displayMessages(){
-						if(subjectBoxes[i].style.display === 'block'){
-								dateBox[i].style.display = 'none';
-								senderBox[i].style.display = 'none';
-								bodyBox[i].style.display = 'none';
-							}else{
-								dateBox[i].style.display = 'block';
-								senderBox[i].style.display = 'block';
-								bodyBox[i].style.display = 'block';
+				}
+					
+				function displayMessages() {
+						console.log(this)
+						// console.log(this.style)
+						// console.log(this.children[0])
+						// console.log(this.children[0].style.display)
+						//this.style is the subject div
+						//this.children[0].style is the date div
+						// console.log(this.style.display)
+						if (this.children[0].style.display === 'block') {
+								this.children[0].style.display = 'none';
+								this.children[1].style.display = 'none';
+								this.children[2].style.display = 'none';
+							} else {
+								this.children[0].style.display = 'block';
+								this.children[1].style.display = 'block';
+								this.children[2].style.display = 'block';
 						}
-					}	
 				}
 
-				setInterval(function(){
+				setInterval(function() {
 				
 				}, 3000);	
       };
