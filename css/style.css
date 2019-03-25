@@ -11,10 +11,6 @@
     padding: 10px;
 }
 
-/* .date{
-    float: right;    
-} */
-
 #emails{
     padding: 20px 50px 20px 50px;
     margin: 20px 10px 20px 10px;
@@ -32,6 +28,8 @@
 .date {
     border: 2px solid yellow;
     display: block;
+    padding: 0px 10px 20px 10px;
+
 }
 
 .sender {
