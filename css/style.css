@@ -1,17 +1,23 @@
 * {
     font-family: 'Roboto', sans-serif;
+    background-color: #666666;
 }
 .menuItems {
     float: left;
     color: red;
-    padding: 0px 10px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
-:hover.menuOptions{
+:hover.menuOptions {
     color: white;
     background: red;
-    margin: 0px 0px 0px 0px;
+    border-radius: 0px 25px 25px 0px;
+    margin: 0px 0px 0px -8px;
     padding: 5px 10px 5px 0px;
 
+}
+
+:hover#inboxCounter {
+    background: red;
 }
 
 #menuOptions {
@@ -20,28 +26,38 @@
 
 #emails{
     /* padding: 20px 50px 20px 100px; */
-    margin: 20px 10px 20px 100px;
+    margin: 20px 80px 20px 80px;
     border: 1px solid red;
 }
 
 .subject {
-    border: 2px solid cornflowerblue;
+    border: 1px solid cornflowerblue;
     display: block;
+    margin: 0px 0px 0px px;
+    background-color: #333333;
+    color: #e6e6e6;
+    /* overflow: auto; */
 }
 
 .date {
     float: right;
     display: block;
-    padding: 0px 10px 20px 10px;
+    background-color: #333333;
+    /* overflow: auto; */
+    /* padding: 0px 10px 20px 10px; */
 }
 
 .sender {
     /* border: 2px solid blue; */
+    background-color: #333333;
     display: block;
+    /* overflow: auto; */
 }
 
 .body {
     padding: 0px 10px 50px 10px;
+    background-color: #333333;
     /* border: 2px solid red; */
     display: block;
+    /* overflow: auto; */
 }
