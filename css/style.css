@@ -4,11 +4,14 @@
 .menuItems {
     float: left;
     color: red;
+    padding: 0px 10px 0px 0px;
 }
 :hover.menuOptions{
     color: white;
     background: red;
-    margin: 0px 350px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 10px 5px 0px;
+
 }
 
 #menuOptions {
@@ -16,15 +19,13 @@
 }
 
 #emails{
-    padding: 20px 50px 20px 50px;
-    margin: 20px 10px 20px 10px;
-}
-
-.email {
+    /* padding: 20px 50px 20px 100px; */
+    margin: 20px 10px 20px 100px;
+    border: 1px solid red;
 }
 
 .subject {
-    border: 7px solid cornflowerblue;
+    border: 2px solid cornflowerblue;
     display: block;
 }
 
@@ -32,7 +33,6 @@
     float: right;
     display: block;
     padding: 0px 10px 20px 10px;
-
 }
 
 .sender {

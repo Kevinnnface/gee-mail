@@ -103,11 +103,16 @@
 					inboxCounter.textContent = "(" + ++num + ")";
 					console.log('after', num)
 
+					var newEmail = document.createElement('div');
+					newEmail.className = 'newEmail'
+					emailBox.prepend(newEmail);
+					console.log(newEmail)
+
 					var newSubject = document.createElement('div');
 					newSubject.addEventListener('click', displayMessages);
 					newSubject.className = 'subject';
 					newSubject.textContent = "Subject: " + getNewMessage().subject;
-					email.prepend(newSubject);
+					newEmail.appendChild(newSubject);
 					newSubject.style.display = 'block'
 				
 					var newDate = document.createElement('div');
@@ -123,7 +128,7 @@
 					newSender.style.display = 'none'
 					
 					var newBody = document.createElement('div');
-					newBody.className = 'date';
+					newBody.className = 'body';
 					newBody.textContent = getNewMessage().body;
 					newSubject.appendChild(newBody);
 					newBody.style.display = 'none'
