@@ -14,13 +14,15 @@
 				email.className = 'email';
 				emailBox.appendChild(email);
 
+				//getEmails to display emails on page
+
 				function getEmails(x, y) {
 					for (var i = 0; i < x; i++) {
 
-						// function makeEmailBox(elem, label, content, cssStyle) {
+						// function makeEmailBox(elem, label, content) {
 						// 	var label = document.createElement(elem);
-						// 	label.className = 'label';
-						// 	label.textContent = y[i].label
+						// 	label.className = '';
+						// 	label.textContent = y[i].label;
 						// }
 
 						var email = document.createElement('div');
@@ -55,6 +57,8 @@
 				}
 				getEmails(geemails.length, geemails);
 
+				//
+
 				var emailContainers = document.getElementsByClassName('email');
 				var subjectBoxes = document.getElementsByClassName('subject');
 				var dateBoxes = document.getElementsByClassName('date');
@@ -68,11 +72,13 @@
 
 
 				for (var i = 0; i < geemails.length; i++) {
-					subjectBoxes[i].addEventListener('click', displayMessages);
+					subjectBoxes[i].addEventListener('click', displayMessages); //add click function on every subjectBoxes
 				}
-					
+
+				//toggles on and off email boxes
+
 				function displayMessages() {
-						console.log(this)
+						// console.log(this)
 						// console.log(this.style)
 						// console.log(this.children[0])
 						// console.log(this.children[0].style.display)
@@ -80,17 +86,19 @@
 						//this.children[0].style is the date div
 						// console.log(this.style.display)
 						if (this.children[0].style.display === 'block') {
-								console.log('it was block style')
+								// console.log('it was block style')
 								this.children[0].style.display = 'none';
 								this.children[1].style.display = 'none';
 								this.children[2].style.display = 'none';
 							} else {
-								console.log('it wasnt block style')
+								// console.log('it wasnt block style')
 								this.children[0].style.display = 'block';
 								this.children[1].style.display = 'block';
 								this.children[2].style.display = 'block';
 						}
 				}
+
+					//add default 10 emails for inboxCounter
 
 					var num = 10;
 					var inboxCounter = document.getElementById('inboxCounter');
@@ -98,15 +106,18 @@
 
 				setInterval(function() {
 
-					console.log('before', num)
-					
+					//add 1 to inbox counter every interval. Use ++num is add to inboxCounter then update vs. num++ display update then add 1 to inboxCounter.
+
+					// console.log('before', num)
 					inboxCounter.textContent = "(" + ++num + ")";
-					console.log('after', num)
+					// console.log('after', num)
 
 					var newEmail = document.createElement('div');
 					newEmail.className = 'newEmail'
 					emailBox.prepend(newEmail);
-					console.log(newEmail)
+					// console.log(newEmail)
+
+					//Create newEmail boxes for every interval.
 
 					var newSubject = document.createElement('div');
 					newSubject.addEventListener('click', displayMessages);
@@ -133,7 +144,7 @@
 					newSubject.appendChild(newBody);
 					newBody.style.display = 'none'
 
-				}, 20000);	
+				}, 5000);	
 				
 
 
