@@ -8,14 +8,15 @@
     <script>
       window.onload = function() {
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+				// We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+				
+				//Create box for where all emails will go and email sub-boxes for messages to go into
 				var emailBox = document.getElementById('emails');
 				var email = document.createElement('div');
 				email.className = 'email';
 				emailBox.appendChild(email);
 
 				//getEmails to display emails on page
-
 				function getEmails(x, y) {
 					for (var i = 0; i < x; i++) {
 
@@ -57,8 +58,6 @@
 				}
 				getEmails(geemails.length, geemails);
 
-				//
-
 				var emailContainers = document.getElementsByClassName('email');
 				var subjectBoxes = document.getElementsByClassName('subject');
 				var dateBoxes = document.getElementsByClassName('date');
@@ -70,12 +69,10 @@
 				// console.log(dateBoxes)
 
 
-
+				//Loops through all messages to add click function to display/hide messages
 				for (var i = 0; i < geemails.length; i++) {
-					subjectBoxes[i].addEventListener('click', displayMessages); //add click function on every subjectBoxes
+					subjectBoxes[i].addEventListener('click', displayMessages); 
 				}
-
-				//toggles on and off email boxes
 
 				function displayMessages() {
 						// console.log(this)
@@ -98,12 +95,13 @@
 						}
 				}
 
-					//add default 10 emails for inboxCounter
+				//Declare default 10 emails for inboxCounter
 
-					var num = 10;
-					var inboxCounter = document.getElementById('inboxCounter');
-					inboxCounter.textContent = "(" + num + ")";
+				var num = 10;
+				var inboxCounter = document.getElementById('inboxCounter');
+				inboxCounter.textContent = "(" + num + ")";
 
+				//Set interval for new messages to display
 				setInterval(function() {
 
 					//add 1 to inbox counter every interval. Use ++num is add to inboxCounter then update vs. num++ display update then add 1 to inboxCounter.
@@ -118,7 +116,6 @@
 					// console.log(newEmail)
 
 					//Create newEmail boxes for every interval.
-
 					var newSubject = document.createElement('div');
 					newSubject.addEventListener('click', displayMessages);
 					newSubject.className = 'subject';
@@ -145,10 +142,6 @@
 					newBody.style.display = 'none'
 
 				}, 5000);	
-				
-
-
-				// console.log(getNewMessage().subject)
       };
     </script>
 	</head>
