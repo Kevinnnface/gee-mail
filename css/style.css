@@ -3,6 +3,12 @@ body {
     background-color: #666666;
 }
 
+#title img:nth-child(1) {
+    height: 10%;
+    width: 8%; 
+    vertical-align: middle;
+}
+
 #cuz {
     display:inline-block;
     font-size: 16pt;
@@ -12,8 +18,9 @@ body {
     float: left;
     color: rgb(255, 20, 20); 
     margin-left: -10px;
+    margin-right: 0px;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 0px;
     font-size: 16pt;
     background: #cccccc;
     border-radius: 0px 25px 25px 0px;
@@ -23,7 +30,7 @@ body {
 #inboxCounter:hover {
     color: inherit; 
     background: inherit;
-    /* padding: 0px 0px 0px 0px; */
+    padding: none;
     font-size: 16pt;
 }
 
@@ -31,15 +38,10 @@ body {
     color: white;
     background: rgb(255, 20, 20);
     border-radius: 0px 25px 25px 0px;
-    margin: 0px 0px 0px 0px;
-    padding: 5px 10px 5px 0px;
+    margin: 0px 0px 0px -3px;
+    padding: 5px 10px 5px 2px;
 
 }
-
-/* :hover#inboxCounter {
-    color: inherit;
-    background: inherit;
-} */
 
 #emails{
     /* padding: 20px 50px 20px 100px; */
@@ -51,7 +53,7 @@ body {
 .subject {
     border: 1px solid cornflowerblue;
     display: block;
-    margin: 0px 0px 0px px;
+    margin: 0px 0px 0px 0px;
     background-color: #333333;
     color: #e6e6e6;
     font-size: 14pt;
