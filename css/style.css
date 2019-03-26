@@ -5,13 +5,19 @@ body {
 
 #cuz {
     display:inline-block;
+    font-size: 16pt;
 }
 
-.menuItems {
+#menuItems {
     float: left;
     color: rgb(255, 20, 20); 
-    /* padding: 0px 0px 0px 0px; */
+    margin-left: -10px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 16pt;
+    background: #cccccc;
+    border-radius: 0px 25px 25px 0px;
+
 }
 
 #inboxCounter:hover {
@@ -25,7 +31,7 @@ body {
     color: white;
     background: rgb(255, 20, 20);
     border-radius: 0px 25px 25px 0px;
-    margin: 0px 0px 0px -8px;
+    margin: 0px 0px 0px 0px;
     padding: 5px 10px 5px 0px;
 
 }
@@ -37,8 +43,8 @@ body {
 
 #emails{
     /* padding: 20px 50px 20px 100px; */
-    margin: 20px 100px 20px 100px;
-    border: 1px solid red;
+    margin: 20px 80px 20px 110px;
+    /* border: 1px solid red; */
 
 }
 
@@ -49,6 +55,7 @@ body {
     background-color: #333333;
     color: #e6e6e6;
     font-size: 14pt;
+    padding-left: -10px;
     /* overflow: auto; */
 }
 
@@ -56,7 +63,7 @@ body {
     float: right;
     display: none;
     background-color: #333333;
-    font-size: 10pt;
+    font-size: 8pt;
     /* overflow: auto; */
     /* padding: 0px 10px 20px 10px; */
 }
@@ -67,11 +74,12 @@ body {
     display: none;
     font-size: 12pt;
     font: bold;
+    padding-top: 20px;
     /* overflow: auto; */
 }
 
 .body {
-    padding: 0px 10px 50px 10px;
+    padding: 20px 50px 20px 50px;
     background-color: #333333;
     /* border: 2px solid red; */
     display: none;
