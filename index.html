@@ -31,25 +31,25 @@
 						subject.className = 'subject';
 						subject.textContent = 'Subject: ' + y[i].subject;
 						email.appendChild(subject);
-						subject.style.display = 'block';
+						// subject.style.display = 'block';
 
 						var date = document.createElement('div');
 						date.className = 'date';
 						date.textContent = 'Date: ' + y[i].date;
 						subject.appendChild(date);
-						date.style.display = 'none';
+						// date.style.display = 'none';
 
 						var sender = document.createElement('div');
 						sender.className = 'sender';
 						sender.textContent = 'Sender: ' + y[i].sender;
 						subject.appendChild(sender);
-						sender.style.display = 'none';
+						// sender.style.display = 'none';
 
 						var body = document.createElement('div');
 						body.className = 'body';
 						body.textContent = y[i].body;
 						subject.appendChild(body);
-						body.style.display = 'none';
+						// body.style.display = 'none';
 
 					}
 				}
@@ -142,7 +142,7 @@
     </script>
 	</head>
 	<body>
-		<h1 class="title">Gee-Mail</h1>
+		<h1 class="title">Gee-Mail <div id="cuz"> cuz...</div></h1>
 		<div class="menuItems"> 
 			<div class="menuOptions">Compose</div>
 			<div class="menuOptions">Inbox <span id="inboxCounter"></span></div>

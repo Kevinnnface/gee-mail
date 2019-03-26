@@ -1,33 +1,45 @@
-* {
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #666666;
 }
+
+#cuz {
+    display:inline-block;
+}
+
 .menuItems {
     float: left;
-    color: red;
-    padding: 0px 0px 0px 0px;
+    color: rgb(255, 20, 20); 
+    /* padding: 0px 0px 0px 0px; */
+    font-size: 16pt;
 }
-:hover.menuOptions {
+
+#inboxCounter:hover {
+    color: inherit; 
+    background: inherit;
+    /* padding: 0px 0px 0px 0px; */
+    font-size: 16pt;
+}
+
+.menuOptions:hover {
     color: white;
-    background: red;
+    background: rgb(255, 20, 20);
     border-radius: 0px 25px 25px 0px;
     margin: 0px 0px 0px -8px;
     padding: 5px 10px 5px 0px;
 
 }
 
-:hover#inboxCounter {
-    background: red;
-}
-
-#menuOptions {
-    padding: 10px;
-}
+/* :hover#inboxCounter {
+    color: inherit;
+    background: inherit;
+} */
 
 #emails{
     /* padding: 20px 50px 20px 100px; */
-    margin: 20px 80px 20px 80px;
+    margin: 20px 100px 20px 100px;
     border: 1px solid red;
+
 }
 
 .subject {
@@ -36,13 +48,15 @@
     margin: 0px 0px 0px px;
     background-color: #333333;
     color: #e6e6e6;
+    font-size: 14pt;
     /* overflow: auto; */
 }
 
 .date {
     float: right;
-    display: block;
+    display: none;
     background-color: #333333;
+    font-size: 10pt;
     /* overflow: auto; */
     /* padding: 0px 10px 20px 10px; */
 }
@@ -50,7 +64,9 @@
 .sender {
     /* border: 2px solid blue; */
     background-color: #333333;
-    display: block;
+    display: none;
+    font-size: 12pt;
+    font: bold;
     /* overflow: auto; */
 }
 
@@ -58,6 +74,7 @@
     padding: 0px 10px 50px 10px;
     background-color: #333333;
     /* border: 2px solid red; */
-    display: block;
+    display: none;
+    font-size: 12pt;
     /* overflow: auto; */
 }
