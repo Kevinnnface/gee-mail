@@ -115,29 +115,32 @@
 					emailBox.prepend(newEmail);
 					// console.log(newEmail)
 
-					//Create newEmail boxes for every interval.
+					//Store getNewMessages into variable
+					var getNewMessages = getNewMessage();
+
+					// Create newEmail boxes for every interval.
 					var newSubject = document.createElement('div');
 					newSubject.addEventListener('click', displayMessages);
 					newSubject.className = 'subject';
-					newSubject.textContent = "Subject: " + getNewMessage().subject;
+					newSubject.textContent = "Subject: " + getNewMessages.subject;
 					newEmail.appendChild(newSubject);
 					newSubject.style.display = 'block'
 				
 					var newDate = document.createElement('div');
 					newDate.className = 'date';
-					newDate.textContent = "Date: " + getNewMessage().date;
+					newDate.textContent = "Date: " + getNewMessages.date;
 					newSubject.appendChild(newDate);
 					newDate.style.display = 'none'
 
 					var newSender = document.createElement('div');
 					newSender.className = 'sender';
-					newSender.textContent = "Sender: " + getNewMessage().sender;
+					newSender.textContent = "Sender: " + getNewMessages.sender;
 					newSubject.appendChild(newSender);
 					newSender.style.display = 'none'
 					
 					var newBody = document.createElement('div');
 					newBody.className = 'body';
-					newBody.textContent = getNewMessage().body;
+					newBody.textContent = getNewMessages.body;
 					newSubject.appendChild(newBody);
 					newBody.style.display = 'none'
 
