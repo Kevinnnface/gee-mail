@@ -116,31 +116,32 @@
 					// console.log(newEmail)
 
 					//Store getNewMessages into variable
-					var getNewMessages = getNewMessage();
+					var getRandomMessages = getNewMessage();
+					console.log(getRandomMessages)
 
 					// Create newEmail boxes for every interval.
 					var newSubject = document.createElement('div');
 					newSubject.addEventListener('click', displayMessages);
 					newSubject.className = 'subject';
-					newSubject.textContent = "Subject: " + getNewMessages.subject;
+					newSubject.textContent = "Subject: " + getRandomMessages.subject;
 					newEmail.appendChild(newSubject);
 					newSubject.style.display = 'block'
 				
 					var newDate = document.createElement('div');
 					newDate.className = 'date';
-					newDate.textContent = "Date: " + getNewMessages.date;
+					newDate.textContent = "Date: " + getRandomMessages.date;
 					newSubject.appendChild(newDate);
 					newDate.style.display = 'none'
 
 					var newSender = document.createElement('div');
 					newSender.className = 'sender';
-					newSender.textContent = "Sender: " + getNewMessages.sender;
+					newSender.textContent = "Sender: " + getRandomMessages.sender;
 					newSubject.appendChild(newSender);
 					newSender.style.display = 'none'
 					
 					var newBody = document.createElement('div');
 					newBody.className = 'body';
-					newBody.textContent = getNewMessages.body;
+					newBody.textContent = getRandomMessages.body;
 					newSubject.appendChild(newBody);
 					newBody.style.display = 'none'
 
